@@ -3,7 +3,7 @@ module "vpc" {
   version = "2.21.0"
 }
 
-resource "vpc" "gaurav" {
+resource "aws_vpc" "gaurav" {
   cidr_block       = "172.16.0.0/24"
   instance_tenancy = "dedicated"
 
