@@ -1,3 +1,12 @@
+resource "aws_vpc" "gaurav" {
+  cidr_block       = "172.16.0.0/24"
+  instance_tenancy = "dedicated"
+
+  tags = {
+    Name = "Gaurav"
+  }
+}
+
 module "vpc" {
   source = "app.terraform.io/Casey-training/vpc/aws"
 
@@ -17,11 +26,3 @@ module "vpc" {
   }
 }
 
-resource "aws_vpc" "gaurav" {
-  cidr_block       = "172.16.0.0/24"
-  instance_tenancy = "dedicated"
-
-  tags = {
-    Name = "Gaurav"
-  }
-}
